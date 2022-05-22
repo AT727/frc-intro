@@ -1,16 +1,28 @@
-class RunIntake{
-   public CANSparkMax intake; 
-
-  public RunIntake(){
-    this.intake = new CANSparkMax(Motor.kPort, CANSparkMax.MotorType.kBrushless);   
-  }
+class RunIntake extends CommandBase{
+public Intake intake; 
   
-  public void setPower(double power){
-    this.intake.set(power);
-  }
-
-  public void getPower(){
-    this.intake.getPower();
-  }
+public void RunIntake(){
+    this.intake = new Intake();
+}
   
-} 
+    @Override
+    public void init() {
+
+    }   
+  
+    @Override
+    public void execute(double power) {
+        intake.setPower(power);
+    }   
+
+    @Override
+    public boolean isFinished() {
+        return false;
+    }
+  
+   @Override
+    public void end() {
+        intake.setPower(0);
+    }
+  
+}
