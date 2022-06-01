@@ -23,7 +23,7 @@ class Turret {
     return this.encoder.getTargetPosition();
   }
   
-  public void setSpeed(double power){
+  public void setPower(double power){
     this.speedMotor.setPower(power);
   }
     
