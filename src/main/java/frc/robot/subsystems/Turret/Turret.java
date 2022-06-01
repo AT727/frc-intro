@@ -14,6 +14,10 @@ class Turret {
   public void setAngle(double angle){
     this.encoder.setPosition(angle);
   }
+   
+  public void getAngle(){
+    return this.encoder.getPosition();
+  }
   
   public void setSpeed(double power){
     this.speedMotor.setPower(power);
