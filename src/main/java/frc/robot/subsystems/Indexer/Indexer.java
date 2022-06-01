@@ -9,7 +9,11 @@ class Indexer {
   }
   
   public void descend(){
-    this.indexer.setPower(-1)
+    this.indexer.setPower(-1);
+  }
+  
+  public void stop(){
+    this.indexer.setPower(0);
   }
     
 }
