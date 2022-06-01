@@ -18,6 +18,10 @@ class Turret {
   public void getAngle(){
     return this.encoder.getPosition();
   }
+   
+  public void getTargetAngle(){
+    return this.encoder.getTargetPosition();
+  }
   
   public void setSpeed(double power){
     this.speedMotor.setPower(power);
